@@ -1,0 +1,23 @@
+.menu {
+    >ul {
+        list-style-type: none;
+
+        >li {
+            display: inline-block;
+            margin-right: 0;
+        }
+    }
+
+    &__item {
+        display: block;
+        padding: 20px;
+        color: $text-color;
+        text-decoration: none;
+        transition: $main-transition;
+        text-decoration: none;
+
+        &:hover {
+            opacity: 0.4;
+        }
+    }
+}

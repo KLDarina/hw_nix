@@ -1,0 +1,28 @@
+.color-blocks__wrapper {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    > .color-blocks__item {
+        width: $color-block-size;
+        height: $color-block-size;
+        position: absolute;
+        &.pink {
+            background: $color-block-pink;
+            z-index: 2;
+            left: 0;
+            top: 0;
+        }
+        &.blue {
+            background: $color-block-blue;
+            z-index: 3;
+            left: calc(#{$color-block-size} / 2);
+            top: calc(#{$color-block-size} / 2);
+        }
+        &.green {
+            background: $color-block-green;
+            z-index: 2;
+            left: $color-block-size;
+            top: $color-block-size;
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.box {
+    padding: 0 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    &__item {
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        width: calc(100% / 3 - 40px);
+        margin-right: 20px;
+        margin-bottom: 20px;
+        min-height: 300px;
+        height: 100%;
+        background: $card-bg;
+
+        &:hover>.box__overlay {
+            opacity: 1;
+        }
+
+        &:hover {
+            background: $card-overlay;
+        }
+
+        &:hover>.box__body>.box__title,
+        &:hover>.box__body>.box__text {
+            color: $active-color;
+        }
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+
+        >img {
+            width: 100%;
+        }
+    }
+
+    &__body {
+        padding: 10px;
+    }
+
+    &__title,
+    &__text {
+        color: $text-color;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__overlay {
+        background: $card-overlay;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+    &__icon {
+        width: 50px;
+    }
+}

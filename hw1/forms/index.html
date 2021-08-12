@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        input[type=checkbox] {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            -webkit-appearance: none;
+            outline: 0;
+        }
+
+        input[type=checkbox]:disabled {
+            background-color: rgba(128, 128, 128, 0.6);
+        }
+
+        input[type=checkbox]:checked {
+            background-image: url('https://i.pinimg.com/originals/2a/f7/0b/2af70b7eb1194dfea457cdc3b386691b.png');
+        }
+
+        input[type=checkbox]:not(:checked) {
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .checkbox__wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>Контактная информация</legend>
+                <p><label for="name">Имя <em>*</em></label> <input type="text" id="name"></p>
+                <p><label for="email">E-mail</label> <input type="email" id="email"></p>
+                <p><label for="phone">Телефон</label> <input type="tel" id="phone"></p>
+                <p>
+                    <select>
+                        <option>Украина</option>
+                        <option>Россия</option>
+                        <option>Америка</option>
+                        <option>Беларусь</option>
+                        <option>Греция</option>
+                        <option>Испания</option>
+                        <option>Италия</option>
+                    </select>
+                </p>
+                <p>
+                    <textarea style="width: 100%; height: 150px; resize: none;">Текстовая область</textarea>
+                </p>
+                <p class="checkbox__wrapper"><input type="checkbox" id="passport" checked disabled> <label
+                        for="passport">Паспорт</label></p>
+                <p class="checkbox__wrapper"><input type="checkbox" id="document"><label for="document">Документ</label>
+                </p>
+                <p class="checkbox__wrapper"><input type="checkbox" id="certificate"> <label
+                        for="certificate">Свидетельство</label></p>
+            </fieldset>
+            <p><input type="submit" value="Отправить"></p>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

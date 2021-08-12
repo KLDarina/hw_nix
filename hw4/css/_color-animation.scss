@@ -1,0 +1,38 @@
+.color-animation__wrapper {
+    width: $color-animation-bg-size;
+    height: $color-animation-bg-size;
+    position: relative;
+    div {
+        width: $color-animation-size;
+        height: $color-animation-size;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        animation: move-block 4s linear forwards infinite;
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes move-block {
+    0% {
+        transform: translate(0, 0);
+        background: $red-animation;
+    }
+    25% {
+        transform: translate(0, calc(#{$color-animation-bg-size} - #{$color-animation-size}));
+        background: $blue-animation;
+    }
+    50% {
+        transform: translate(calc(#{$color-animation-bg-size} - #{$color-animation-size}), calc(#{$color-animation-bg-size} - #{$color-animation-size}));
+        right: 0;
+        background: $green-animation;
+    }
+    75% {
+        transform: translate(calc(#{$color-animation-bg-size} - #{$color-animation-size}), 0);
+        background: $yellow-animation;
+    }
+    100% {
+        transform: translate(0, 0);
+        background: $red-animation;
+    }
+}

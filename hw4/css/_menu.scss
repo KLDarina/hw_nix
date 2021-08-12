@@ -1,0 +1,80 @@
+.menu {
+	display: block;
+	height: 100vh;
+	width: 40px;
+	margin: 0;
+	background-color: grey;
+	position: fixed;
+	transition: all 0.5s ease-in-out;
+	z-index: 99;
+
+	&:hover {
+		height: 100vh;
+		width: 280px;
+		background-color: grey;
+		position: fixed;
+		transform: translateX(-1px);
+
+		>.menu__here {
+			color: grey;
+		}
+
+		>.menu__nav {
+			opacity: 100;
+			visibility: visible;
+			position: fixed;
+			transform: translateY(20px);
+		}
+	}
+
+	&__here {
+		display: block;
+		margin: 0;
+		font-size: 20px;
+		color: white;
+		text-align: center;
+		transition: all 0.5s ease-in-out;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		writing-mode: vertical-rl;
+		transform: translate(-50%, -50%);
+	}
+
+	&__nav {
+		display: block;
+		opacity: 0;
+		visibility: hidden;
+		list-style: none;
+		position: absolute;
+		top: 20px;
+		margin: 0;
+		transition: all 0.2s ease-in-out;
+	}
+
+	&__nav--item {
+		color: orange;
+
+		&:before {
+			content: '♦';
+			position: absolute;
+			left: 20px;
+		}
+
+		>div {
+			transition: all 0.5s ease-in-out;
+		}
+	}
+}
+
+
+.label {
+	text-decoration: none;
+	color: white;
+	font-size: 25px;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		color: orange;
+	}
+}
